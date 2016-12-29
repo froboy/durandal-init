@@ -14,9 +14,11 @@ cd ~
 
 # We can't get them directly, but just click this button :)
 xcode-select --install
-sudo xcodebuild -license accept
 
 pause 'Press [Enter] once you have installed XCode and XCode Command Line Tools.'
+
+# Just make sure...
+sudo xcodebuild -license accept
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -108,7 +110,7 @@ cp .gitignore_global ~/.gitignore_global
 cp .profile ~/.profile
 
 # Get git things
-curl -o ~/usr/local/etc/bash_completion.d/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-curl -o ~/usr/local/etc/bash_completion.d/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+curl -o /usr/local/etc/bash_completion.d/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+curl -o /usr/local/etc/bash_completion.d/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 
 echo "NICE WORK! Now get going... THEY'RE EVERYWHERE!!!"
