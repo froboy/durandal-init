@@ -71,7 +71,7 @@ brew cask install vagrant
 brew cask install virtualbox
 brew cask install sequel-pro
 brew cask install sourcetree
-brew cask install torguardf
+brew cask install torguard
 brew install node
 brew install npm
 
