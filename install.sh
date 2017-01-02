@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-# This is heavily inspired by the amazing Michelle
+# This is heavily inspired by the amazing Michelle & Luke
 # https://github.com/craychee/loki-init
-# Saints are silly.
+# https://github.com/lukewertz/gabriel-init
+# "If things around here aren't working, it's because I'm laughing so hard."
 
 function pause() {
   read -p "$*"
