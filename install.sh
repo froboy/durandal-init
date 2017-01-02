@@ -51,7 +51,7 @@ brew cask install spotify # 🎶
 # Install the MacAppStore CLI and git some apps.
 # If you haven't purchased these in the App Store, this won't work.
 brew install mas
-mas signin froboy@gmail.com
+mas signin froboy@gmail.com # This will give a warning if you signed in to iCloud when you set up the computer.
 mas install 1179623856 # Pastebot
 mas install 899972312 # WordService
 mas install 406056744 # Evernote
@@ -74,6 +74,9 @@ brew cask install sourcetree
 brew cask install torguard
 brew install node
 brew install npm
+
+# Get composer and put it in the right place. This will require your password
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 
 # Be sure we can vagrant
 brew install ansible
