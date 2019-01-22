@@ -11,3 +11,9 @@ fi
 
 export VISUAL=pico
 export EDITOR="$VISUAL"
+
+# Delete locally merged branches, via https://twitter.com/HugoGiraudel/status/842337980966703104
+alias cleanup='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
+
+# When permissions get rough, throw your hands up.
+alias omgchmod='chmod -R a+w web/*'
