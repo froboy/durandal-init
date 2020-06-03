@@ -28,14 +28,6 @@ brew install ruby
 brew install git
 brew install wget
 
-brew tap caskroom/cask
-brew tap homebrew/dupes
-brew tap homebrew/versions
-brew tap homebrew/binary
-brew tap caskroom/versions
-
-brew install brew-cask
-
 # Browsers
 brew cask install google-chrome
 brew cask install firefox
