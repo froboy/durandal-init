@@ -38,31 +38,27 @@ brew install brew-cask
 
 # Browsers
 brew cask install google-chrome
-# Don't kid yourself... you'll eventually need it
 brew cask install firefox
 
 # Random Mac tools
-# brew cask install alfred # Do all the things
-# brew cask install lastpass # Personal passwords
-brew cask install 1password # Work passwords
-# brew cask install hipchat # You know... 'cause we're hip
-# brew cask install macdown # Write better README.md's
+brew cask install macdown # Write better README.md's
 brew cask install spotify # 🎶
 
 # Install the MacAppStore CLI and git some apps.
 # If you haven't purchased these in the App Store, this won't work.
 brew install mas
 mas signin froboy@gmail.com # This will give a warning if you signed in to iCloud when you set up the computer.
+mas install 1333542190 # 1Password
 mas install 1179623856 # Pastebot
 mas install 899972312 # WordService
-mas install 406056744 # Evernote
 mas install 417375580 # BetterSnapTool
 mas install 405772121 # LittleIpsum
-# mas install 668208984 # GIPHY CAPTURE
+# mas install 668208984 # GIPHY CAPTURE (Using Kap for now)
 mas install 803453959 # Slack
 mas install 975937182 # Fantastical 2
 mas install 425955336 # Skitch
-mas install 557168941 # Tweetbot
+mas install 1384080005 # Tweetbot
+mas install 692867256 # Simplenote
 # id's above are tied to specific versions.
 # They're most certainly out of date...
 mas upgrade
@@ -71,10 +67,11 @@ mas upgrade
 # brew cask install vagrant
 brew cask install virtualbox
 brew cask install sequel-pro
+brew cask install visual-studio-code
 # brew cask install sourcetree
 # brew cask install torguard
-brew cask install phpstorm # ⌨️⛈
-brew cask install gitkraken # 🍴
+# brew cask install phpstorm # ⌨️⛈
+# brew cask install gitkraken # 🍴
 brew cask install kap # 🖥📷
 brew install node
 brew install npm
@@ -94,16 +91,22 @@ curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/loca
 # Set up PHP tools
 # https://philsturgeon.uk/php/2013/08/20/php-static-analysis-in-sublime-text/
 # http://benmatselby.github.io/sublime-phpcs/
-echo "Setting up PHP Tools"
-sudo chown -R `whoami` /usr/local
-brew tap homebrew/homebrew-php
-brew install phpmd
-brew install php-code-sniffer
-brew install php-cs-fixer
+# This happens in containers now...
+# echo "Setting up PHP Tools"
+# sudo chown -R `whoami` /usr/local
+# brew tap homebrew/homebrew-php
+# brew install phpmd
+# brew install php-code-sniffer
+# brew install php-cs-fixer
 
 # Do the Mac thing that you have to do but you shouldn't have to do
 # This https://github.com/jirsbek/SSH-keys-in-macOS-Sierra-keychain
-curl -o ~/Library/LaunchAgents/ssh.add.a.plist https://raw.githubusercontent.com/jirsbek/SSH-keys-in-macOS-Sierra-keychain/master/ssh.add.a.plist
+#curl -o ~/Library/LaunchAgents/ssh.add.a.plist https://raw.githubusercontent.com/jirsbek/SSH-keys-in-macOS-Sierra-keychain/master/ssh.add.a.plist
+touch ~/.ssh/config
+echo "Host *
+   AddKeysToAgent yes
+   UseKeychain yes" >> ~/.ssh/config
+
 
 # Hold my own hand to make sure I finish configuring.
 echo "Add your ssh keys (you put them in your secret hiding place)."
