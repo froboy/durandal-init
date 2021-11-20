@@ -19,22 +19,29 @@ xcode-select --install
 pause 'Press [Enter] once you have installed XCode and XCode Command Line Tools.'
 
 # Just make sure...
-sudo xcodebuild -license accept
+# This doesn't work any more
+# sudo xcodebuild -license accept
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 
 # Installing software...
-brew install ruby
-brew install git
+# brew install ruby
+# brew install git
 brew install wget
 
 # Browsers
-brew cask install google-chrome
-brew cask install firefox
+brew install --cask google-chrome
+brew install --cask firefox
 
 # Random Mac tools
-brew cask install macdown # Write better README.md's
-brew cask install spotify # 🎶
+# brew install --cask macdown # Write better README.md's
+brew install --cask spotify # 🎶
+brew install --cask istat-menus
+brew install --cask zoom
 
 # Install the MacAppStore CLI and git some apps.
 # If you haven't purchased these in the App Store, this won't work.
@@ -57,16 +64,17 @@ mas upgrade
 
 # Dev tools
 # brew cask install vagrant
-brew cask install virtualbox
-brew cask install sequel-pro
-brew cask install visual-studio-code
+# brew cask install virtualbox
+brew install --cask sequel-pro
+brew install --cask visual-studio-code
 # brew cask install sourcetree
 # brew cask install torguard
 # brew cask install phpstorm # ⌨️⛈
 # brew cask install gitkraken # 🍴
-brew cask install kap # 🖥📷
+brew install --cask kap # 🖥📷
 brew install node
 brew install npm
+brew install php
 
 # Get composer and put it in the right place. This will require your password
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
